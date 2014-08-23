@@ -1,15 +1,11 @@
-require 'pp'
-require 'set'
 require 'rubygems'
 require 'rubygems/server'
+require 'salvage/rvm'
+require 'pp'
 
-RVM_PATH = ENV['rvm_path']
-GEMS_BASE = File.join(RVM_PATH, 'gems')
+rvm = Salvage::Rvm.new
 
-search_glob = File.join(GEMS_BASE, '*', '**', 'specifications')
-spec_dirs = Dir[search_glob].map{|dir| File.dirname(dir) }
-
-server = Gem::Server.new spec_dirs, 8089, false
+server = Gem::Server.new rvm.gem_dirs, 8089, false
 
 pp Gem::Specification.all.map{|s| [s.name, s.version] }
 pp Gem::Specification.dirs
