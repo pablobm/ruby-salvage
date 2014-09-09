@@ -1,25 +1,23 @@
+require 'salvage/gem_finder'
+require 'salvage/utils'
+
 module Salvage
   class Rbenv
+
     def initialize(rbenv_path = default_rbenv_path)
-      @rbenv_path = rbenv_path
+      @finder = Salvage::GemFinder.new(rbenv_path)
     end
 
     def gem_dirs
-      search_glob = File.join(rbenv_path, '*', '**', 'specifications')
-      Dir[search_glob].map{|dir| File.dirname(dir) }
+      @finder.gem_dirs
     end
 
 
-    private
-
-    attr_reader :rbenv_path
+  private
 
     def default_rbenv_path
-      ENV['RBENV_ROOT'] || File.join(home, '.rbenv')
+      ENV['RBENV_ROOT'] || Salvage::Utils.home_dir('.rbenv')
     end
 
-    def home
-      Dir.home(Etc.getpwuid.name)
-    end
   end
 end
