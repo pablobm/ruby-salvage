@@ -19,7 +19,11 @@ module Salvage
     end
 
     def default_rvm_path
-      ENV['rvm_path']
+      ENV['rvm_path'] || File.join(home, '.rvm')
+    end
+
+    def home
+      Dir.home(Etc.getpwuid.name)
     end
   end
 end
