@@ -1,6 +1,7 @@
 require 'rubygems/server'
 require 'salvage/rvm'
 require 'salvage/rbenv'
+require 'salvage/ruby_install'
 
 module Salvage
   class Server
@@ -14,12 +15,12 @@ module Salvage
     end
 
 
-    private
+  private
 
     attr_accessor :server
 
     def gem_dirs
-      rvm.gem_dirs + rbenv.gem_dirs
+      rvm.gem_dirs + rbenv.gem_dirs + ruby_install.gem_dirs
     end
 
     def rvm
@@ -28,6 +29,10 @@ module Salvage
 
     def rbenv
       @rbenv ||= Salvage::Rbenv.new
+    end
+
+    def ruby_install
+      @ruby_install ||= Salvage::RubyInstall.new
     end
 
   end
