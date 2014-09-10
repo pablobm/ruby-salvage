@@ -33,6 +33,9 @@ describe Salvage::GemFinder do
 
       assert_equal expected, actual
     end
+
+    # And it's probably successful at finding gems under other environments,
+    # but I don't think it's worth writing tests for that...
   end
 
 end
