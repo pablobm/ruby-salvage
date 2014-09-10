@@ -3,7 +3,7 @@ require_relative 'lib/salvage/version'
 Gem::Specification.new do |s|
   s.name = "salvage"
   s.version = Salvage::Version::STRING
-  s.summary = "Make available gems installed in any of your Ruby environments"
+  s.summary = "Make available any gems installed in any of your Ruby environments"
   s.description = "Run a Rubygems server that provides gems installed in any RVM/rbenv/etc environment in the machine"
   s.license = 'MIT'
 
