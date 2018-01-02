@@ -27,8 +27,8 @@ describe Salvage::GemFinder do
       finder = Salvage::GemFinder.new(base_path)
       actual = finder.gem_dirs.sort
       expected = [
-        '1.9.3-p547/lib/ruby/gems/1.9.1',
-        '2.1.2/lib/ruby/gems/2.1.0',
+        'ree-1.8.7-2012.02/lib/ruby/gems/1.8',
+        '2.4.1/lib/ruby/gems/2.4.0',
       ].map{|dir| File.join(base_path, 'versions', dir) }.sort
 
       assert_equal expected, actual
