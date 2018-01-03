@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.executables << 'salvage.rb'
 
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest'
 end
