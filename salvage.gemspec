@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*.rb', 'bin/*']
   s.executables << 'salvage.rb'
 
-  s.add_development_dependency 'rake', '~> 10'
+  s.add_development_dependency 'rake'
 end
