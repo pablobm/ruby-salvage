@@ -1,6 +1,8 @@
 language: ruby
 rvm:
-  - ree-1.8.7-2011.12
-  - 1.9.3-p551
-  - 2.4.2
-  - jruby-head
+  - ruby-2.0.0-p648
+  - ruby-2.1.10
+  - ruby-2.2.9
+  - ruby-2.3.6
+  - ruby-2.4.3
+  - ruby-2.5.0
