@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/badges/github.com/pablobm/ruby-salvage.svg)](https://gemnasium.com/github.com/pablobm/ruby-salvage)
+
 # Salvage
 
 Run a Rubygems server that provides gems installed in any RVM/rbenv/etc environment in the machine.
