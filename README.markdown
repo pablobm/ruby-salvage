@@ -1,4 +1,5 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/pablobm/ruby-salvage.svg)](https://gemnasium.com/github.com/pablobm/ruby-salvage)
+[![Build Status](https://travis-ci.org/pablobm/ruby-salvage.svg?branch=master)](https://travis-ci.org/pablobm/ruby-salvage)
 
 # Salvage
 
